@@ -1,0 +1,27 @@
+<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+
+  <md-toolbar color="primary">
+      <span fxFlexOffset="5%"></span>
+      <i class="fa fa-home"></i>
+      <span fxFlexOffset="0.5%"></span>
+      <span>Room Expance Management System</span>
+      
+      <span fxFlexOffset="20%"></span>
+      <button md-button [routerLink]="['/room/roomies']">Roomies</button>
+
+      <span fxFlexOffset="1%"></span>
+      <button md-button [routerLink]="['/room/categories']">Categories</button>
+
+      <span fxFlexOffset="1%"></span>
+      <button md-button [routerLink]="['/room/calc-expance']">Expance Calculator</button>
+
+      <span fxFlexOffset="1%"></span>
+      <button md-button [routerLink]="['/room/report']">Report</button>
+
+      <span fxFlexOffset="10%"></span>
+      <i class="fa fa-sign-out"></i>
+      <span fxFlexOffset="0.5%"></span>
+      <span>Logout</span>
+  </md-toolbar>
+
+</div>
