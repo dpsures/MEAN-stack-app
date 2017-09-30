@@ -14,6 +14,8 @@ import { CategoriesComponent } from './categories/categories.component';
 import { ExpanceCalculatorComponent } from './expance-calculator/expance-calculator.component';
 import { ReportComponent } from './report/report.component';
 
+import { RoomiesService } from "./roomies/roomies.service";
+
 const APP_MAIN_ROUTING : Routes = [
   {path : '', redirectTo : '/login', pathMatch : 'full'},
   {path : 'login', component : LoginComponent},
@@ -42,6 +44,7 @@ const APP_MAIN_ROUTING : Routes = [
     ExpanceCalculatorComponent,
     ReportComponent
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [RoomiesService]
 })
 export class MainRoutingModule { }
