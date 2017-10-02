@@ -11,8 +11,23 @@ export class RoomiesService {
 
   constructor(private _http : HttpClient) { }
 
-  getRoomies() : Observable<any> {
+  getAll() : Observable<any> {
     return this._http.get("/api/users");
   }
 
+  doUpdate(user : Users){
+    console.log("updated value --->"+user.firstName);
+  }
+
+  update(user : Users){
+    return this._http.put("/api/users/"+user._id,user);
+  }
+
+  delete(user : Users){
+    return this._http.delete("/api/users"+user._id);
+  }
+
+  create(user : Users){
+    return this._http.post("/api/users/register",user);
+  }
 }

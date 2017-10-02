@@ -21,7 +21,7 @@ export class RoomiesComponent implements OnInit {
   }
 
   getUsers() {
-    this._room_service.getRoomies()
+    this._room_service.getAll()
     .subscribe(data => {
         this.allRoomies = data.data;
     });
