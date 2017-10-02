@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from "@angular/router";
-import { MatButtonModule,MatToolbarModule,MatCardModule,MatListModule,MatGridListModule,
-  MatMenuModule } from "@angular/material";
+import { MaterialComponentModule } from "./material.module";
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { FormsModule } from "@angular/forms";
 
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +13,7 @@ import { RoomiesComponent } from './roomies/roomies.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ExpanceCalculatorComponent } from './expance-calculator/expance-calculator.component';
 import { ReportComponent } from './report/report.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
 
 import { RoomiesService } from "./roomies/roomies.service";
 
@@ -32,8 +33,7 @@ const APP_MAIN_ROUTING : Routes = [
 
 @NgModule({
   imports: [
-    CommonModule, RouterModule.forRoot(APP_MAIN_ROUTING),MatButtonModule,MatToolbarModule,MatCardModule,MatListModule,MatGridListModule,
-    MatMenuModule,FlexLayoutModule
+    CommonModule, RouterModule.forRoot(APP_MAIN_ROUTING),MaterialComponentModule,FlexLayoutModule,FormsModule
   ],
   declarations: [
     LoginComponent,
@@ -42,9 +42,10 @@ const APP_MAIN_ROUTING : Routes = [
     RoomiesComponent,
     CategoriesComponent,
     ExpanceCalculatorComponent,
-    ReportComponent
+    ReportComponent, UpdateProfileComponent
   ],
   exports: [RouterModule],
-  providers: [RoomiesService]
+  providers: [RoomiesService],
+  entryComponents: [UpdateProfileComponent]
 })
 export class MainRoutingModule { }

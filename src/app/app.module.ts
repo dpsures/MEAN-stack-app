@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
+import { MaterialComponentModule } from "./material.module";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-import { MatButtonModule,MatToolbarModule,MatCardModule,MatListModule,MatGridListModule,
- MatMenuModule } from "@angular/material";
  import { FlexLayoutModule } from "@angular/flex-layout";
  import 'hammerjs';
 
@@ -15,8 +15,7 @@ import { MainRoutingModule } from "./main-routing.module";
     AppComponent
   ],
   imports: [
-    BrowserModule,MatButtonModule,MatToolbarModule,MatCardModule,MatListModule,MatGridListModule,
-    MatMenuModule,FlexLayoutModule,MainRoutingModule,HttpClientModule
+    BrowserModule,MaterialComponentModule,FlexLayoutModule,MainRoutingModule,HttpClientModule,BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

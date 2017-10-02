@@ -1,0 +1,30 @@
+<div>
+
+  <h2 md-dialog-title>Update Profile</h2>
+
+  <md-dialog-content>
+    <form ngNoForm>
+      <md-form-field>
+        <input mdInput placeholder="First Name" [(ngModel)]="firstName" required fxFlex>
+      </md-form-field>
+
+      <md-form-field>
+        <input mdInput placeholder="Last Name" [(ngModel)]="lastName" required fxFlex mdLine>
+      </md-form-field>
+
+      <md-form-field>
+        <input mdInput placeholder="Mobile" [(ngModel)]="mobile" required fxFlex mdLine>
+      </md-form-field>
+
+      <md-form-field>
+        <input mdInput placeholder="Email" [(ngModel)]="email" required fxFlex mdLine>
+      </md-form-field>
+    </form>
+  </md-dialog-content>
+
+  <md-dialog-actions>
+    <span fxFlex></span>
+    <button md-raised-button color="warn" (click)="closeDialog()">Cancel</button>
+    <button md-raised-button color="accent">Update</button>
+  </md-dialog-actions>
+</div>
